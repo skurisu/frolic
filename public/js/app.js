@@ -20,13 +20,16 @@ function render(myObj) {
 
   $("div.photos").empty();
 
-  myObj.photos.map(function (photo) {
-    $("div.photos").append("<img src='"+ photo +"'>");
-    $("img").addClass("single-pic");
+  myObj.photos.map(function (photo, index) {
+    var classes = 'single-pic';
+    if(index !== 0) {
+      classes += ' hide-pic';
+    }
+    $("div.photos").append("<img src='"+ photo +"' class=" + "'" + classes + "'" + ">");
   });
 
   $("div.associated_pages").empty();
-  
+
   myObj.associated_pages.map(function (url) {
     $("div.associated_pages").append('<a href="' + url.link + '">' + url.title + '</a>');
   });
