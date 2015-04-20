@@ -1,0 +1,8 @@
+.name, .photos, .review, .location {
+  border: 2px solid black;
+}
+
+.single-pic {
+  max-width: 300px;
+}
+
