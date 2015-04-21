@@ -1,12 +1,47 @@
-.name, .photos, .review, .location {
-  border: 2px solid black;
+/*-------------------global-------------------*/
+.name {
+  background-color: red;
+  padding: 20px;
 }
 
 .single-pic {
   max-width: 300px;
 }
 
+.photos {
+  background-color: green;
+}
+
+.review {
+  background-color: pink;
+}
+
+.location {
+  background-color: orange;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+}
+
+.associated-pages {
+  background-color: yellow;
+}
+
+
 .hide-pic {
   display: none;
 }
 
+/*-------------------small screen-------------------*/
+@media only screen and (max-width: 667px) {
+  .outer-wrapper {
+    max-width: 667px;
+  }
+  
+  .name {
+    padding: 50px;   
+  }
+
+}

@@ -16,7 +16,7 @@ function render(myObj) {
   $("div.name").html(myObj.name);
   $("div.review").html(myObj.review);
   $("div.location").html(myObj.location);
-  $("div.map").html('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
+  $("div.map").html('<iframe class="google-map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
 
   $("div.photos").empty();
 
@@ -28,10 +28,10 @@ function render(myObj) {
     $("div.photos").append("<img src='"+ photo +"' class=" + "'" + classes + "'" + ">");
   });
 
-  $("div.associated_pages").empty();
+  $("div.associated-pages").empty();
 
   myObj.associated_pages.map(function (url) {
-    $("div.associated_pages").append('<a href="' + url.link + '">' + url.title + '</a>');
+    $("div.associated-pages").append('<a href="' + url.link + '">' + url.title + '</a>');
   });
 }
 
