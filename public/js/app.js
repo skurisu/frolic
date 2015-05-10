@@ -14,9 +14,9 @@ $(function(){
 
 function render (myObj) {
   $("div.name").html(myObj.name);
-  $("div.review").html(myObj.review);
+  $("div.description").html(myObj.description);
   $("div.location").html(myObj.location);
-  $("div.map").html('<iframe class="google-map" height="450" width="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
+  $("div.map").html('<iframe class="google-map" height="300" width="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
 
   $("div.photos").empty();
 
@@ -30,8 +30,8 @@ function render (myObj) {
 
   $("div.associated-pages").empty();
 
-  myObj.associated_pages.map(function (url) {
-    $("div.associated-pages").append('<a href="' + url.link + '">' + url.title + '</a>');
+  myObj.associated_pages.map(function (article) {
+    $("div.associated-pages").append('<div class="individual-article">' + '<img src=' + article.thumbnail +' class="thumbnail">' + '<a href="' + article.link + '">' + article.title + '</a>' + '</div>');
   });
 }
 
@@ -43,12 +43,12 @@ var testObj = {
         "http://www.reactiongifs.us/wp-content/uploads/2014/02/banana_despicable_me.gif",
         "http://i.ytimg.com/vi/f3ratSbJ3Ls/maxresdefault.jpg"
     ],
-    review: "this is my review",
-    location: "2904 E Manoa Rd Honolulu, HI 96822",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam totam fuga ad sint facilis consequatur eligendi, officiis enim delectus incidunt suscipit neque, inventore deserunt, magni minima explicabo consectetur odit illo!",
+    location: "2904 E Manoa Rd, Honolulu HI 96822",
     associated_pages: [
-      {title: "article1", link: "http://www.google.com"},
-      {title: "article2", link: "http://www.buzzfeed.com"},
-      {title: "article3", link: "http://www.yahoo.com"}]
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "This is the title of my article blah blah blah asdffdsa", link: "http://www.google.com"},
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "It's kind of long", link: "http://www.buzzfeed.com"},
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "But I don't really care", link: "http://www.yahoo.com"}]
 };
 
 var testObj2 = {
@@ -58,11 +58,11 @@ var testObj2 = {
         "http://www.yhenjyty.com/nyyti3kkpieni.JPG",
         "http://britishgrit.com/wp-content/uploads/2013/02/068.jpg"
     ],
-    review: "arf! my house!",
+    description: "arf! my house!",
     location: "1925 Judd Hillside Rd Honolulu, HI 96822",
     associated_pages: [
-      {title: "article1", link: "http://www.google.com"},
-      {title: "article2", link: "http://www.buzzfeed.com"},
-      {title: "article3", link: "http://www.yahoo.com"}]
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "This is the title of my article blah blah blah asdffdsa", link: "http://www.google.com"},
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "It's kind of long", link: "http://www.buzzfeed.com"},
+      {thumbnail: "http://www-static.weddingbee.com/pics/241570/mint-green.jpeg", title: "But I don't really care", link: "http://www.yahoo.com"}]
 };
 

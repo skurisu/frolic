@@ -18,10 +18,33 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.outer-wrapper {
+  padding: 5px;
+}
+
 .name {
   background-color: #191A1B;
   color: #FFFFFF;
   padding: 20px;
+  font-size: 20px;
+}
+
+.map-container {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.location {
+  /*background-color: orange;*/
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.description {
+  /*background-color: pink;*/
+  padding: 15px;
 }
 
 .single-pic {
@@ -32,32 +55,37 @@ body {
 }
 
 .photos {
-  background-color: green;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
 }
 
-.review {
-  background-color: pink;
+
+
+.individual-article {
+  display: block;
+  height: 140px;
 }
 
-.location {
-  background-color: orange;
+.thumbnail {
+  padding-top: 15px;
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  float: left;
 }
 
-/*.google-map {
-  width: 100%;
-}*/
-
-.google-map {
-  max-width: 100%;
+.associated-pages a{
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  padding-top: 15px;
+  margin-left: 10px;
 }
-
-.associated-pages {
-  background-color: yellow;
-}
-
 
 .hide-pic {
   display: none;
+  color: inherit;
 }
 
 /*-------------------small screen-------------------*/
