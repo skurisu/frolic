@@ -12,11 +12,11 @@ $(function(){
 
 });
 
-function render(myObj) {
+function render (myObj) {
   $("div.name").html(myObj.name);
   $("div.review").html(myObj.review);
   $("div.location").html(myObj.location);
-  $("div.map").html('<iframe class="google-map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
+  $("div.map").html('<iframe class="google-map" height="450" width="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJ2XQnZtD-O5nFyeQmEGyTBMVRJRRPVPo&q=' + myObj.location + '"></iframe>');
 
   $("div.photos").empty();
 
